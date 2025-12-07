@@ -149,8 +149,13 @@
     ✨ Building Modern Web Apps with Cloud-Powered .NET Engineering
   </p>
 
-  <img src="images/Profile.jpeg" alt="Amarjeet Kumar" class="profile-pic">
-  
+  <!-- <img src="images/Profile.jpeg" alt="Amarjeet Kumar" class="profile-pic"> -->
+  <img src="images/Profile.jpeg" 
+     alt="Amarjeet Kumar" 
+     class="profile-pic"
+     onclick="openProfile()"
+     style="cursor:pointer;">
+
   <div class="social-icons w3-padding-16">
     <a href="https://www.linkedin.com/in/amarjeet-kumar-9b1a39224" target="_blank"><i class="fa fa-linkedin"></i></a>
     <a href="https://github.com/Golu12344" target="_blank"><i class="fa fa-github"></i></a>
@@ -202,5 +207,54 @@
 </footer>
 
 <script src="js/script.js"></script>
+
+<!-- Profile Zoom Modal -->
+<div id="profileModal" class="w3-modal" onclick="closeProfile()">
+  <div class="zoom-container">
+      <img id="modalImage" src="images/Profile.jpeg" class="zoom-image">
+  </div>
+</div>
+
+<style>
+/* Modal full-screen center */
+.zoom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main zoom image style */
+.zoom-image {
+  width: 80vw;
+  max-width: 350px;
+  border-radius: 50%;
+  border: 6px solid #00ffff;
+  animation: zoomEffect 0.5s ease;
+}
+
+/* Smooth Zoom Animation */
+@keyframes zoomEffect {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+</style>
+
+<script>
+function openProfile() {
+  document.getElementById("profileModal").style.display = "block";
+}
+
+function closeProfile() {
+  document.getElementById("profileModal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
