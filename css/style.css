@@ -1,0 +1,71 @@
+/* General */
+body,h1,h2,h3,h4,h5,h6 {font-family:"Montserrat",sans-serif;}
+html {scroll-behavior:smooth; margin:0; padding:0;}
+
+/* Navbar */
+.w3-bar {position:fixed; top:0; width:100%; z-index:99;}
+.w3-bar a {transition:.3s;}
+.w3-bar a:hover, .w3-bar a.active {background:#00d2ff; transform:scale(1.1); color:#000;}
+
+/* Profile Images */
+.profile-pic {border-radius:50%; width:300px; height:300px; box-shadow:0 0 45px #00ffe5; border:3px solid #00ffe5; transition:.3s;}
+.profile-pic:hover {transform:scale(1.06); box-shadow:0 0 70px cyan;}
+
+/* Section Cards */
+.section-card {background:#1a1a1a; border-radius:10px; padding:18px; margin-bottom:20px; transition:.3s;}
+.section-card:hover {transform:scale(1.03); box-shadow:0 0 20px rgba(0,255,255,0.3);}
+
+/* Skill Bars */
+.skillbar {background:#fff; border-radius:5px; margin-bottom:10px;}
+.skillbar div {height:10px; border-radius:5px; background:linear-gradient(to right,#00d2ff,#3a7bd5);}
+
+/* Scroll Fade Animation */
+.w3-animate-opacity {animation: fadeIn .8s ease-in-out;}
+@keyframes fadeIn {0% {opacity:0; transform:translateY(20px);} 100% {opacity:1; transform:translateY(0);}}
+
+/* Footer */
+footer {padding:16px; text-align:center; color:#aaa; font-size:14px;}
+
+/* Responsive */
+@media only screen and (max-width:600px){
+  h1.w3-jumbo {font-size:42px; line-height:48px;}
+  .profile-pic {width:210px; height:210px; box-shadow:0 0 30px #00ffe5;}
+  .w3-bar {font-size:14px;}
+}
+
+/* Buttons */
+    .w3-button {
+      font-size: 1rem;
+      padding: 12px 25px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+    .w3-button:hover {
+      transform: scale(1.1);
+    }
+ /* Fix for navbar wrapping */
+  .w3-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .w3-bar .w3-bar-item {
+    flex: 0 0 auto;
+  }
+
+  .w3-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Navbar */
+    .w3-bar .w3-bar-item {
+      transition: 0.3s;
+    }
+    .w3-bar .w3-bar-item:hover {
+      background-color: #00ffff !important;
+      color: #000 !important;
+    }
+
+    

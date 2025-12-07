@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - Amarjeet</title>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+
+    /* Navbar */
+    .w3-bar .w3-bar-item {
+      transition: 0.3s;
+    }
+    .w3-bar .w3-bar-item:hover {
+      background-color: #00ffff !important;
+      color: #000 !important;
+    }
+
+     /* Fix for navbar wrapping */
+  .w3-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .w3-bar .w3-bar-item {
+    flex: 0 0 auto;
+  }
+
+  .w3-bar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Buttons */
+    .w3-button {
+      font-size: 1rem;
+      padding: 12px 25px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+    .w3-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Fix for navbar wrapping */
+  .w3-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .w3-bar .w3-bar-item {
+    flex: 0 0 auto;
+  }
+
+  .w3-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+   @media (max-width: 480px) {
+  .w3-bar .w3-bar-item {
+    padding: 8px 10px !important;
+    font-size: 12px !important;
+  }
+}
+    .project-card {
+      background: rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .project-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 320px;  /* Makes all cards equal height */
+    /* display: flex;
+    flex-direction: column; */
+    /*justify-content: space-between; *//* Space text + button nicely */
+}
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 20px rgba(0,255,255,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-bar w3-black w3-large w3-padding">
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="about.html" class="w3-bar-item w3-button">About</a>
+  <a href="projects.html" class="w3-bar-item w3-button w3-cyan">Projects</a>
+  <a href="experience.html" class="w3-bar-item w3-button">Experience</a>
+  <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+<header class="w3-center w3-padding-32">
+  <h2 class="w3-text-cyan">My Projects</h2>
+  <p>Showcasing my best work and contributions</p>
+</header>
+
+<div class="w3-content" style="max-width: 1000px;">
+
+  <div class="w3-row-padding">
+
+    <!-- ERP SAAS Platform Project Section -->
+    <section class="w3-container w3-padding-32">
+
+    <h2 class="w3-text-cyan"><strong>ERP SAAS Platform – HRMS, Ticketing & CRM</strong></h2>
+
+    <p>
+        A complete multi-tenant ERP SAAS platform designed to automate organizational workflows using a scalable,
+        modular API-driven architecture. The system enables businesses to manage all core operations centrally.
+    </p>
+
+    <ul class="w3-text-light-grey">
+        <li><strong>HRMS Module:</strong> Attendance tracking, leave management, payroll inputs, employee onboarding,
+        role-based access, and biometric/GPS login integration.</li>
+
+        <li><strong>Ticketing System:</strong> Issue life-cycle management with SLA-driven workflow routing,
+        escalation rules, audit logs, prioritization, and analytics dashboards.</li>
+
+        <li><strong>CRM Module:</strong> Lead capture, customer profiling, task assignment, follow-up tracking,
+        and sales pipeline monitoring.</li>
+
+        <li><strong>SaaS Architecture:</strong> Multi-tenant DB design, tenant-configuration based UI,
+        dynamic API metadata, and centralized user/org management.</li>
+
+        <li><strong>Security:</strong> AES 256 encryption, masked demographic fields, OAuth-secured authentication,
+        API token validation, and secure session handling.</li>
+
+        <li><strong>Automation:</strong> Background schedulers, notifications (email/SMS), approval workflows,
+        and configurable reporting engine.</li>
+
+        <li><strong>UI & Integration:</strong> Smooth integration with Angular/React frontend ensuring
+        fast, responsive, component-driven UI.</li>
+    </ul>
+
+    <!-- View Button -->
+    <!-- <a href="erp-saas.html" class="w3-button w3-cyan w3-round-large w3-margin-top">View Details</a> -->
+
+    <section class="w3-container w3-padding-16">
+    <div class="w3-row-padding">
+
+        <!-- Project Card 1 -->
+        <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="project-card w3-center">
+                <i class="fa fa-lock fa-3x w3-text-cyan"></i>
+                <h3>ERP Encryption System</h3>
+                <p>
+                    Architected AES-256 GCM encryption pipeline for securing demographic and finance-related data.
+                </p>
+                <a href="coming-soon.html" class="w3-button w3-cyan w3-round-large">View</a>
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="project-card w3-center">
+                <i class="fa fa-clock-o fa-3x w3-text-cyan"></i>
+                <h3>Time Tracking & Attendance Engine</h3>
+                <p>
+                    Automated working hours calculation with biometric/GPS login integration.
+                </p>
+                <a href="coming-soon.html" class="w3-button w3-cyan w3-round-large">View</a>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="project-card w3-center">
+                <i class="fa fa-cloud fa-3x w3-text-cyan"></i>
+                <h3>.NET + Azure Cloud API System</h3>
+                <p>
+                    Cloud-ready APIs using Azure App Services & Queues for scalable performance.
+                </p>
+                <a href="coming-soon.html" class="w3-button w3-cyan w3-round-large">View</a>
+            </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="project-card w3-center">
+                <i class="fa fa-user-circle-o fa-3x w3-text-cyan"></i>
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    Fully responsive portfolio built using HTML, CSS, JS & W3.CSS.
+                </p>
+                <a href="index.html" class="w3-button w3-cyan w3-round-large">View</a>
+            </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="w3-col l4 m6 s12 w3-margin-bottom">
+            <div class="project-card w3-center">
+                <i class="fa fa-lightbulb-o fa-3x w3-text-cyan"></i>
+                <h3>Upcoming Project</h3>
+                <p>
+                    More exciting projects will be added soon.
+                </p>
+                <a href="coming-soon.html" class="w3-button w3-cyan w3-round-large">View</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+  </div>
+
+</div>
+
+<footer class="w3-center w3-padding-16">
+  <p>© 2025 Amarjeet Kumar</p>
+</footer>
+
+</body>
+</html>
