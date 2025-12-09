@@ -1,6 +1,96 @@
 {
-  "skills": "I am skilled in .NET Core, Angular, SQL Server, AI integration, and automation.",
-  "projects": "I have built ERP modules, biometric integrations, encryption engines, and AI tools.",
-  "about": "I am Amarjeet Kumar, a passionate full stack .NET developer.",
-  "contact": "You can reach me at amarjeet@example.com or via LinkedIn."
+  "meta": {
+    "name": "AmarBot",
+    "version": "1.0",
+    "description": "Portfolio assistant chatbot for Amarjeet Kumar"
+  },
+
+  "about": {
+    "name": "Amarjeet Kumar",
+    "role": "Full Stack .NET Developer",
+    "intro": "I am a passionate and ambitious full stack developer specializing in .NET Core, Angular, SQL Server, AI, automation, and enterprise ERP systems.",
+    "vision": "To build scalable enterprise applications and integrate AI into real-world business solutions."
+  },
+
+  "skills": [
+    ".NET Core",
+    "C#",
+    "Angular",
+    "SQL Server",
+    "Azure",
+    "Microservices",
+    "AI/ML Integrations",
+    "Selenium Automation",
+    "Power Automate Workflows",
+    "Biometric & GPS Integration",
+    "AES-GCM Encryption"
+  ],
+
+  "achievements": [
+    "Developed dynamic AES-GCM encryption system for enterprise ERP.",
+    "Improved encrypted API performance by 40% using optimized SQL + C# pipeline.",
+    "Built GPS + biometric attendance integration for HRMS.",
+    "Delivered multiple ERP modules including HRMS, Finance, Inventory.",
+    "Created intelligent AI-based chat engines for enterprise applications."
+  ],
+
+  "contact": {
+    "email": "amarjeet@example.com",
+    "portfolio": "https://amarxplore.vercel.app",
+    "linkedin": "https://linkedin.com/in/amarjeet",
+    "github": "https://github.com/amarjeet"
+  },
+
+  "faqs": {
+    "who_are_you": "I am Amarjeet Kumar, a Full Stack .NET Developer skilled in .NET Core, Angular, SQL Server, AI integrations, automation, and enterprise ERP development.",
+    "what_do_you_do": "I build enterprise ERP applications, secure APIs, automation tools, AI-powered features, biometric attendance systems, and scalable backend architectures.",
+    "what_are_your_skills": "My key skills include .NET Core, Angular, SQL Server, Azure, Microservices, AI integration, Selenium automations, Power Automate flows, and AES-GCM encryption.",
+    "your_experience": "I have hands-on experience building full ERP modules, GPS + biometric attendance tracking, encryption frameworks, dynamic APIs, HRMS systems, and automation workflows.",
+    "your_projects": "I have delivered ERP modules, biometric integrations, GPS-based attendance, encryption engine, automation bots, AI chat systems, and performance optimized APIs.",
+    "how_to_contact": "You can contact me via email, LinkedIn, or my portfolio website—links included above.",
+    "what_is_your_goal": "My goal is to become a top full stack developer and solution architect, building modern AI-powered enterprise applications."
+  },
+
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey", "good morning", "good evening"],
+      "response": "Hello! I’m AmarBot 👋 How can I help you explore Amarjeet’s portfolio today?"
+    },
+    {
+      "tag": "about_me",
+      "patterns": ["who are you", "tell me about amarjeet", "who is amarjeet", "about you"],
+      "response": "Amarjeet Kumar is a Full Stack .NET Developer specializing in .NET Core, Angular, SQL Server, AI, automation, and enterprise ERP applications."
+    },
+    {
+      "tag": "skills",
+      "patterns": ["your skills", "what can you do", "tech stack", "what technologies do you use"],
+      "response": "I work with .NET Core, C#, Angular, SQL Server, Azure, Microservices, AI/ML, automation tools, biometric integrations, and AES-GCM encryption."
+    },
+    {
+      "tag": "projects",
+      "patterns": ["your projects", "what have you built", "portfolio projects"],
+      "response": "I have built ERP modules, biometric attendance systems, GPS tracking, encryption engines, AI chatbots, automation workflows, and high-performance APIs."
+    },
+    {
+      "tag": "contact",
+      "patterns": ["contact you", "how can I reach you", "email", "linkedin"],
+      "response": "You can contact Amarjeet via email at amarjeet@example.com or visit his portfolio amarxplore.vercel.app"
+    },
+    {
+      "tag": "confirmation",
+      "patterns": ["yes", "yeah", "yep", "sure", "ok"],
+      "response": "Great! You can ask me about Amarjeet’s skills, projects, achievements, or contact info."
+    },
+    {
+      "tag": "negation",
+      "patterns": ["no", "nah", "not really"],
+      "response": "No worries! You can ask me anytime about Amarjeet’s portfolio."
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thx"],
+      "response": "You’re welcome! 😊 Feel free to ask more about Amarjeet’s skills, projects, or achievements."
+    }
+  ]
 }
