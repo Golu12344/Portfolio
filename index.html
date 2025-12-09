@@ -8,10 +8,16 @@
   <!-- W3.CSS & Fonts -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- ChatBot CSS -->
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+
 
   <style>
     body {
@@ -255,6 +261,186 @@ function closeProfile() {
   document.getElementById("profileModal").style.display = "none";
 }
 </script>
+
+<!-- Chat Bubble
+<div id="chatbot-btn">💬</div>
+
+Chat Window 
+<div id="chatbot-box">
+  <div id="chatbot-header">
+  AI Assistant
+  <span id="chatbot-close" style="float:right; cursor:pointer; font-size:18px; font-weight:bold;">✖</span>
+  </div>
+
+  <div id="chatbot-messages"></div>
+
+  <div id="chatbot-input-area">
+    <input id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">Send</button>
+  </div>
+</div>
+
+<link rel="stylesheet" href="css/chatbot.css">
+<script src="js/chatbot.js"></script> -->
+
+<!-- <script>
+function sendMessage() {
+  fetch("http://localhost:5000/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: "Hello!" })
+  })
+    .then(res => res.json())
+    .then(data => console.log("Chatbot reply:", data))
+    .catch(err => console.error(err));
+}
+</script>
+
+  Add your JS here, just before </body> 
+  <script>
+    const chatBtn = document.getElementById('chatbot-btn');
+    const chatBox = document.getElementById('chatbot-box');
+    const chatClose = document.getElementById('chatbot-close');
+    const chatMessages = document.getElementById('chatbot-messages');
+    const chatInput = document.getElementById('chatbot-input');
+    const sendBtn = document.getElementById('chatbot-send');
+
+    // Toggle chat window
+    chatBtn.addEventListener('click', () => {
+      chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+    });
+    chatClose.addEventListener('click', () => {
+      chatBox.style.display = 'none';
+    });
+
+    // Append message
+    function appendMessage(content, type) {
+      const msg = document.createElement('div');
+      msg.classList.add(type === 'user' ? 'user-msg' : 'bot-msg');
+      msg.textContent = content;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Send message
+    async function sendMessage() {
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      appendMessage(message, 'user');
+      chatInput.value = '';
+
+      try {
+        const res = await fetch("http://localhost:5000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message })
+        });
+        const data = await res.json();
+        appendMessage(data.reply || "Sorry, no response.", 'bot');
+      } catch (err) {
+        appendMessage("Error connecting to server.", 'bot');
+        console.error(err);
+      }
+    }
+
+    // Send on button click
+    sendBtn.addEventListener('click', sendMessage);
+
+    // Send on Enter key
+    chatInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+  </script>
+
+<button onclick="sendMessage()">Send Message</button> --> 
+
+<!-- <script>
+  const chatBtn = document.getElementById('chatbot-btn');
+  const chatBox = document.getElementById('chatbot-box');
+  const chatClose = document.getElementById('chatbot-close');
+  const chatMessages = document.getElementById('chatbot-messages');
+  const chatInput = document.getElementById('chatbot-input');
+  const sendBtn = document.getElementById('chatbot-send');
+
+  // Toggle chat window
+  chatBtn.addEventListener('click', () => {
+    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+  });
+  chatClose.addEventListener('click', () => {
+    chatBox.style.display = 'none';
+  });
+
+  // Append message
+  function appendMessage(content, type) {
+    const msg = document.createElement('div');
+    msg.classList.add(type === 'user' ? 'user-msg' : 'bot-msg');
+    msg.textContent = content;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Send message
+  async function sendMessage() {
+    const message = chatInput.value.trim();
+    if (!message) return;
+
+    appendMessage(message, 'user');
+    chatInput.value = '';
+
+    try {
+      const res = await fetch("http://localhost:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+      const data = await res.json();
+      appendMessage(data.reply || "Sorry, no response.", 'bot');
+    } catch (err) {
+      appendMessage("Error connecting to server.", 'bot');
+      console.error(err);
+    }
+  }
+
+  // Send on button click
+  sendBtn.addEventListener('click', sendMessage);
+
+  // Send on Enter key
+  chatInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // prevent line break
+      sendMessage();
+    }
+  });
+
+</script> -->
+
+  <!-- Floating Chat Button -->
+<div id="chatbot-btn">💬</div>
+
+<!-- Chat Window -->
+<div id="chatbot-box">
+    <div id="chatbot-header">
+        Amar AI Assistant
+        <span id="chatbot-close">✖</span>
+    </div>
+
+    <div id="chatbot-messages"></div>
+    <div id="typing-indicator">AI is typing...</div>
+
+    <div id="chatbot-input-area">
+        <input id="chatbot-input" type="text" placeholder="Type a message..." />
+        <button id="voice-btn">🎤</button>
+        <button id="chatbot-send">Send</button>
+    </div>
+</div>
+
+<!-- LOAD JS -->
+<script src="js/chatbot.js"></script>
+
 
 </body>
 </html>
