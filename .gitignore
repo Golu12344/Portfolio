@@ -1,0 +1,16 @@
+# Ignore environment variables
+.env
+chat-backend/.env
+*.env
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build files
+dist/
+.vercel/
